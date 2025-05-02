@@ -1,6 +1,6 @@
 defmodule Main do
-  IO.puts("Hello, world!")
-  IO.puts("This is a simple Elixir program that prints a message to the console.")
+  def correr do
+    servidor = Servidor.start_link()
+    spawn(fn -> Cliente.start_link(servidor) end)
+  end
 end
-buenastardes noches lo que sea
-xfin pude fucking iniciar el repositorio para hacer cambios desde visual, que bendicion, diosmio
