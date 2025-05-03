@@ -11,7 +11,7 @@ defmodule Cliente do
 
     case registrado? do
       "s" ->
-        if Autenticarse.autenticar(nombre_usuario, contrasena) do
+        if Autenticarse.autenticacion(nombre_usuario, contrasena) do
           send(pid_servidor, {:conectar, self(), nombre_usuario})
           escuchar(pid_servidor, nombre_usuario)
         else
@@ -53,7 +53,7 @@ defmodule Cliente do
 
   defp ciclo(pid_servidor, nombre_usuario) do
     receive do
-      {:bienvenido, _} -> IO.puts("Bienvenido #{nombre_usuario}"); ciclo(pid_servidor, nombre_usuario)
+      {:Bienvenido, _} -> IO.puts("Bienvenido #{nombre_usuario}"); ciclo(pid_servidor, nombre_usuario)
       {:mensaje, de, mensaje} -> IO.puts("#{de}: #{mensaje}"); ciclo(pid_servidor, nombre_usuario)
       {:sala_creada, sala} -> IO.puts("Sala #{sala} creada."); ciclo(pid_servidor, nombre_usuario)
       {:unido_sala, sala} -> IO.puts("Te has unido a la sala #{sala}"); ciclo(pid_servidor, nombre_usuario)
