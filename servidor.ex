@@ -50,7 +50,7 @@ defmodule Servidor do
       {:historial, pid} ->
         usuario = Map.get(estado.usuarios, pid)
         if usuario && usuario.sala do
-          send(pid, {historial, Util.cargar_historial(usuario.sala)})
+          send(pid, {:historial, Util.cargar_historial(usuario.sala)})
         end
         ciclo(estado)
       end

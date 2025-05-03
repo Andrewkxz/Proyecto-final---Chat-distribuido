@@ -4,14 +4,14 @@ defmodule Cliente do
     registrado? = IO.gets("") |> String.trim()
 
     IO.write("Tu nombre de usuario es: ")
-    nombre_usuario = IO.gets("") |> Sting.trim()
+    nombre_usuario = IO.gets("") |> String.trim()
 
     IO.write("Tu contraseña es: ")
     contrasena = IO.gets("") |> String.trim()
 
     case registrado? do
       "s" ->
-        if Autenticacion.autenticar(nombre_usuario, contrasena) do
+        if Autenticarse.autenticar(nombre_usuario, contrasena) do
           send(pid_servidor, {:conectar, self(), nombre_usuario})
           escuchar(pid_servidor, nombre_usuario)
         else
@@ -19,7 +19,7 @@ defmodule Cliente do
         end
 
       "n" ->
-        case Autenticacion.registrar(nombre_usuario, contrasena) do
+        case Autenticarse.registrar(nombre_usuario, contrasena) do
           {:ok, :registrado} ->
             IO.puts("Usuario registrado correctamente.")
             send(pid_servidor, {:conectar, self(), nombre_usuario})

@@ -1,6 +1,6 @@
 defmodule Autenticarse do
   def autenticacion(nombre_usuario, contrasena) do
-    case.File.read("usuarios.txt") do
+    case File.read("usuarios.txt") do
       {ok, contenido} ->
         contenido
           |> String.split("\n", trim:true)
