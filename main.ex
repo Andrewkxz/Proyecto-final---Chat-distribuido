@@ -10,3 +10,4 @@ defmodule Main do
     Node.set_cookie(:chat)
     Cliente.inicio()
 end
+end
