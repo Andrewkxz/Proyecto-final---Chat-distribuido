@@ -1,57 +1,66 @@
 defmodule Servidor do
   def inicio do
-    spawn(__MODULE__, :init, [%{usuarios: %{}, salas: %{}}])
+    IO.puts("[Servidor] Iniciando servidor...")
+    :global.registrar_nombre_servidor(:servidor, spawn_link(__MODULE__, :init, [%{usuarios: %{}, salas: %{}}]))
   end
 
-  def init(estado), do: ciclo(estado)
+  def init(estado), do
+    IO.puts("[Servidor] Servidor creado con exito.")
+    ciclo(estado)
+  end
 
   defp ciclo(estado) do
     receive do
-      {:conectar, pid, nombre_usuario} ->
-        send(pid, {:Bienvenido, nombre_usuario})
-        ciclo(%{estado | usuarios: Map.put(estado.usuarios, pid, %{nombre: nombre_usuario, sala: nil})})
-
-      {:desconectar, pid} ->
-        loop(%{estado | usuarios: Map.delete(estado.usuarios, pid)})
-
-      {:crear_sala, pid, nombre_sala} ->
-        if.Map.has_key?(estado.salas, nombre_sala) do
-          send(pid, {:error, "La sala ya existe."})
-        else
-          send(pid, {:sala_creada, nombre_sala})
-          ciclo(%{estado | salas: Map.put(estado.salas, nombre_sala, [])})
+      {:registrar_usuario, nombre_usuario, contrasena, de} ->
+        case Autenticacion.registrar_usuario(nombre_usuario, contrasena) do
+          :ok -> send(de, {:ok, "Usuario registrado."})
+          {:error, mensaje} -> send(de, {:error, mensaje})
         end
+        :timer.sleep(200)
+        ciclo(estado)
+
+      {:ingresar, nombre_usuario, contrasena, de} ->
+        case Autenticacion.iniciar_sesion(nombre_usuario, contrasena) do
+          :ok -> send(de, {:ok, "Bienvenido #{nombre_usuario}"})
+          {:error, mensaje} -> send(de, {:error, mensaje})
+        end
+        :timer.sleep(200)
+        ciclo(estado)
+
+      {:crear_sala, nombre_sala, de} ->
+        estado_nuevo = if Map.has_key?(estado.salas, nombre_sala) do
+          send(de, {:error, "La sala ya existe."})
+          estado
+          else
+            send(de, {:ok, "Sala #{nombre_sala} creada exitosamente."})
+            Map.update!(estado, :salas, &Map.put($1, nombre_sala, []))
+          end
+          :timer.sleep(200)
+          ciclo(estado_nuevo)
 
       {:unirse_sala, pid, nombre_sala} ->
         if Map.has_key?(estado.salas, nombre_sala) do
-          actualizar_salas = Map.update!(estado.salas, nombre_sala, fn usuarios -> [pid | usuarios] end)
-          actualizar_usuarios = Map.update!(estado.usuarios, pid, &Map.put(&1, :sala, nombre_sala))
-          send(pid, {:unido_sala, nombre_sala})
-          ciclo(%{estado | salas: actualizar_salas, usuarios: actualizar_usuarios})
+          actualizar_salas = Map.update!(estado.salas, nombre_sala, fn usuarios -> [nombre_usuario | usuarios] end)
+          send(de, {:ok, "#{nombre_usuario} se unió a la sala #{nombre_sala}."})
+          ciclo(%{estado | salas: actualizar_salas})
         else
-          send(pid, {:error, "Sala no encontrada."})
+          send(de, {:error, "Sala no encontrada."})
           ciclo(estado)
         end
 
-      {:mensaje, pid, texto} ->
-        usuario = Map.get(estado.usuarios, pid)
-        if usuario && usuario.sala do
-          Enum.each(estado.salas[usuario.sala], fn x -> send(x, {:mensaje, usuario.nombre, texto}) end)
-        else
-          send(pid, {:error, "No estás en ninguna sala."})
-        end
+      {:enviar_mensaje, nombre_usuario, nombre_sala, mensaje} ->
+        IO.puts("[#{nombre_sala}] #{nombre_usuario}: #{mensaje}")
+        Util.guardar_mensaje(nombre_sala, "[#{nombre_sala}] #{nombre_usuario}: #{mensaje}")
         ciclo(estado)
 
-      {:listar_usuarios, pid} ->
-        nombre_usuarios = Enum.map(estado.usuarios, fn {_pid, usr} -> usr.nombre end)
-        send(pid, {:usuarios, nombre_usuarios})
+      {:listar_usuarios, de} ->
+        usuarios = Map.keys(estado.usuarios)
+        send(de, {:ok, usuarios})
         ciclo(estado)
 
-      {:historial, pid} ->
-        usuario = Map.get(estado.usuarios, pid)
-        if usuario && usuario.sala do
-          send(pid, {:historial, Util.cargar_historial(usuario.sala)})
-        end
+      {:historial, nombre_sala, de} ->
+        mensajes = Util.cargar_mensajes(nombre_sala)
+        send(de, {:ok, mensajes})
         ciclo(estado)
       end
     end

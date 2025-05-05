@@ -1,12 +1,12 @@
 defmodule Util do
 
-  def add_mensaje(sala, usuario, texto) do
-    File.write!("#{sala}_historial.txt", "#{usuario}: #{texto}\n", [:append])
+  def guardar_mensaje(nombre_sala, mensaje) do
+    File.write!("#{nombre_sala}_historial.txt", mensaje <> "\n", [:append])
   end
 
-  def cargar_historial(sala) do
-    case File.read("#{sala}_historial.txt") do
-      {:ok, contenido} -> contenido
+  def cargar_historial(nombre_sala) do
+    case File.read("#{nombre_sala}_historial.txt") do
+      {:ok, contenido} -> String.split(contenido, "\n") |> Enum.join("\n")
       _ -> "No hay historial disponible."
     end
   end

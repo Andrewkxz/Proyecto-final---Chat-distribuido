@@ -1,65 +1,55 @@
 defmodule Cliente do
-  def inicio(pid_servidor) do
-    IO.puts("Estás registrado en el servidor? (s/n): ")
-    registrado? = IO.gets("") |> String.trim()
-
-    IO.write("Tu nombre de usuario es: ")
-    nombre_usuario = IO.gets("") |> String.trim()
-
-    IO.write("Tu contraseña es: ")
-    contrasena = IO.gets("") |> String.trim()
-
-    case registrado? do
-      "s" ->
-        if Autenticarse.autenticacion(nombre_usuario, contrasena) do
-          send(pid_servidor, {:conectar, self(), nombre_usuario})
-          escuchar(pid_servidor, nombre_usuario)
-        else
-          IO.puts("Error: Usuario o contraseña incorrectos.")
-        end
-
-      "n" ->
-        case Autenticarse.registrar(nombre_usuario, contrasena) do
-          {:ok, :registrado} ->
-            IO.puts("Usuario registrado correctamente.")
-            send(pid_servidor, {:conectar, self(), nombre_usuario})
-            escuchar(pid_servidor, nombre_usuario)
-
-          {:error, :usuario_existente} ->
-            IO.puts("Error: El usuario ya existe.")
-          end
-
-      _ ->
-        IO.puts("Opción no válida. Por favor, introduce 's' o 'n'.")
+  def inicio do
+    case Node.connect(:"servidor@localhost") do
+      true -> IO.puts("[Cliente] Conectado al servidor.")
+      false -> IO.puts("[Cliente] No se pudo conectar al servidor.")
     end
+
+    servidor = :global.whereis_name(:chat_server)
+
+    spawn(fn -> salida_ciclo(servidor) end)
+    escuchar()
   end
 
-  defp escuchar(pid_servidor, nombre_usuario) do
-    spawn(fn ->
-      salida_ciclo(pid_servidor) end)
-    ciclo(pid_servidor, nombre_usuario)
-  end
+  def salida_ciclo(servidor) do
+    nombre_usuario = IO.gets("Introduce tu nombre de usuario: ") |> String.trim()
+    contrasena = IO.gets("Introduce tu contraseña: ") |> String.trim()
 
-  defp salida_ciclo(pid_servidor) do
-    for linea <- IO.stream(:stdio, :linea), do: Cliente.manejo_salida(pid_servidor, String.trim(linea))
-  end
+    send(servidor, {:ingresar, nombre_usuario, contrasena, self()})
+    :timer.sleep(200)
 
-  def manejo_salida(pid_servidor, "/list"), do: send(pid_servidor, {:listar_usuarios, self()})
-  def manejo_salida(pid_servidor, "/history"), do: send(pid_servidor, {:historial, self()})
-  def manejo_salida(pid_servidor, "/exit"), do: send(pid_servidor, {:desconectar, self()})
-  def manejo_salida(pid_servidor, <<"/create", sala::binary>>), do: send(pid_servidor, {:crear_sala, self(), sala})
-  def manejo_salida(pid_servidor, <<"/join", sala::binary>>), do: send(pid_servidor, {:unirse_sala, self(), sala})
-  def manejo_salida(pid_servidor, mensaje), do: send(pid_servidor, {mensaje, self(), mensaje})
-
-  defp ciclo(pid_servidor, nombre_usuario) do
     receive do
-      {:Bienvenido, _} -> IO.puts("Bienvenido #{nombre_usuario}"); ciclo(pid_servidor, nombre_usuario)
-      {:mensaje, de, mensaje} -> IO.puts("#{de}: #{mensaje}"); ciclo(pid_servidor, nombre_usuario)
-      {:sala_creada, sala} -> IO.puts("Sala #{sala} creada."); ciclo(pid_servidor, nombre_usuario)
-      {:unido_sala, sala} -> IO.puts("Te has unido a la sala #{sala}"); ciclo(pid_servidor, nombre_usuario)
-      {:usuarios, lista} -> IO.puts("Usuarios: #{Enum.join(lista, ", ")}"); ciclo(pid_servidor, nombre_usuario)
-      {:historial, contenido} -> IO.puts("Historial: \n#{contenido}"); ciclo(pid_servidor, nombre_usuario)
-      {:error, mensaje} -> IO.puts("Error: #{mensaje}"); ciclo(pid_servidor, nombre_usuario)
+      {:ok, mensaje} -> IO.puts(mensaje)
+      {:error, error} -> IO.puts("Error: #{error}"); System.halt(1)
     end
+
+    sala = IO.gets("Introduce el nombre de la sala a la que se desea unir: ") |> String.trim()
+    send(servidor, {:crear_sala, nombre_sala, self()})
+    :timer.sleep(200)
+    send(servidor, {:unirse_sala, nombre_usuario, nombre_sala, self()})
+
+    ciclo(servidor, nombre_usuario, nombre_sala)
+  end
+
+  defp ciclo(servidor, nombre_usuario, nombre_sala) do
+    mensaje = IO.gets("") |> String.trim()
+
+    case mensaje do
+      "/list" -> send(servidor, {:listar_usuarios, self()})
+      "/historial" -> send(servidor, {:historial, nombre_sala, self()})
+      "/salir" -> IO.puts(Saliendo...); exit(:normal)
+      _-> send(servidor, {:enviar_mensaje, nombre_usuario, nombre_sala, mensaje})
+    end
+
+    :timer.sleep(200)
+    ciclo(servidor, nombre_usuario, nombre_sala)
+  end
+
+
+  defp escuchar() do
+    receive do
+      any -> IO.inspect(any)
+    end
+    listen()
   end
 end

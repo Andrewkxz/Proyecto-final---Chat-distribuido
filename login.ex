@@ -2,24 +2,29 @@ defmodule Autenticarse do
   def autenticacion(nombre_usuario, contrasena) do
     case File.read("usuarios.txt") do
       {ok, contenido} ->
-        contenido
-          |> String.split("\n", trim:true)
-          |> Enum.any?(fn linea ->
-            linea == "#{nombre_usuario}:#{contrasena}"
-          end)
+        if Enum.any?(String.split(contenido, "\n"), fn linea -> linea == "#{nombre_usuario}:#{contrasena}" end) do
+          :ok
+        else
+          {:error, "Usuario o contraseña incorrectos"}
+        end
 
-      _ ->
-        IO.puts("Error al leer el archivo de usuarios.")
-        false
+        _-> {:error, "No se pudo leer el archivo"}
+      end
     end
-  end
+
 
   def registro_usuario(nombre_usuario, contrasena) do
-    if autenticacion(nombre_usuario, contrasena) do
-      {:error, :usuario_existente}
-    else
-      File.write!("usuarios.txt", "#{nombre_usuario}:#{contrasena}\n", [:append])
-      {:ok, :usuario_registrado}
+    case File.read("usuarios.txt") do
+      {:ok, contenido} ->
+        if String.contains?(contenido, "#{nombre_usuario}") do
+          {:error, "El usuario ya existe"}
+        else
+          File.write!("usuarios.txt", <> "\n#{nombre_usuario}:#{contrasena}")
+          :ok
+      end
+      {:error, _} ->
+        File.write!("usuarios.txt", "#{nombre_usuario}:#{contrasena}\n")
+        :ok
     end
   end
 end
