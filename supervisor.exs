@@ -6,7 +6,7 @@ defmodule Supervisor do
   end
 
 defp iniciar_servidor() do
-  spawn_link(fn -> nodo_servidor.main() end)
+  spawn_link(fn -> NodoServidor.main() end)
 end
 
 defp loop() do
