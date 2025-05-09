@@ -26,8 +26,9 @@ defmodule NodoServidor do
         case Map.get(salas, nombre_sala) do
           nil -> :ignorar
           sala_pid -> send(sala_pid, {:mensaje_sala, de, mensaje})
-          historial = Map.update(historial, nombre_Sala, [mensaje], &[mensaje | &1])
         end
+
+          nuevo_historial = Map.update(historial, nombre_sala, [mensaje], &[mensaje | &1])
         loop(salas, historial)
 
       {:salir_sala, usuario, nombre_sala} ->
