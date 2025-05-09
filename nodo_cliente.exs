@@ -5,7 +5,7 @@ defmodule NodoCliente do
     :timer.sleep(500)
 
     usuario = Usuario.autenticar()
-    send({:servidor, :Servidor@servidor}, {:autenticacion, self(), usuario})
+    send({:servidor, :servidor@servidor}, {:autenticacion, self(), usuario})
 
     esperar_autenticacion(usuario)
   end
@@ -15,10 +15,12 @@ defmodule NodoCliente do
       {:autenticado, true} ->
         Util.mostrar_mensaje("Bienvenido #{usuario.nombre} :D")
         loop(usuario, nil)
+
       {:autenticado, false} ->
         Util.mostrar_error("Credenciales incorrectas. Intenta de nuevo.")
-      end
+        esperar_autenticacion(usuario)
     end
+  end
 
   defp loop(usuario, sala_actual) do
     mostrar_menu(sala_actual)
@@ -32,7 +34,11 @@ defmodule NodoCliente do
         send({:servidor, :servidor@servidor}, {:unirse_sala, self(), usuario, nombre_sala})
 
       ["/msg", mensaje] ->
-        send({:servidor, :servidor@servidor}, {:mensaje_sala, sala_actual, usuario.nombre, mensaje})
+        if sala_actual != nil do
+          send({:servidor, :servidor@servidor}, {:mensaje_sala, sala_actual, usuario.nombre, mensaje})
+        else
+          Util.mostrar_error("Debes unirte a una sala para enviar mensajes.")
+        end
 
       ["/salir"] when sala_actual != nil ->
         send({:servidor, :servidor@servidor}, {:salir_sala, usuario, sala_actual})
@@ -43,11 +49,22 @@ defmodule NodoCliente do
       ["/list"] ->
         send({:servidor, :servidor@servidor}, {:listar_usuarios, self()})
 
-      ["/history"] when sala_actual != nil ->
-        send({:servidor, :Servidor@servidor}, {:historial, self(), sala_actual})
+      ["/history"] ->
+        if sala_actual != nil do
+          send({:servidor, :servidor@servidor}, {:historial, self(), sala_actual})
+        else
+          Util.mostrar_error("Debes unirte a una sala para ver el historial.")
+        end
 
-      ["/buscar", palabra] when sala_actual != nil ->
-        send({:servidor, :servidor@servidor}, {:buscar_mensaje, self(), sala_actual, palabra})
+      ["/buscar", palabra] ->
+        if sala_actual != nil do
+          send({:servidor, :servidor@servidor}, {:buscar_mensaje, self(), sala_actual, palabra})
+        else
+          Util.mostrar_error("Debes unirte a una sala para buscar mensajes.")
+        end
+
+      ["/ayuda"] ->
+        mostrar_menu(sala_actual)
 
       ["/cerrar"] ->
         Util.mostrar_mensaje("Saliendo del sistema...")
@@ -56,7 +73,9 @@ defmodule NodoCliente do
 
       _ ->
         Util.mostrar_error("Comando invalido o no te encuentras en una sala.")
+        mostrar_menu(sala_actual)
       end
+
 
       recibir_respuesta(usuario, sala_actual)
     end
@@ -72,7 +91,8 @@ defmodule NodoCliente do
           loop(usuario, nombre_sala)
 
         {:mensaje_nuevo, mensaje} ->
-          IO.puts(mensaje)
+          [fecha_hora | contenido] = String.split(mensaje, "] ", parts: 2)
+          IO.puts("[#{String.trim_leading(fecha_hora, "[")}] #{Enum.join(contenido)}")
           loop(usuario, sala_actual)
 
         {:historial, mensajes} ->
@@ -98,23 +118,23 @@ defmodule NodoCliente do
           Util.mostrar_error(mensaje)
           loop(usuario, sala_actual)
         end
-      end
-
-      defp mostrar_menu(nil) do
-        IO.puts("\nComandos disponibles:")
-        IO.puts("/crear <nombre de la sala> - Crear una nueva sala")
-        IO.puts("/unirse <nombre de la sala> - Unirse a una sala existente")
-        IO.puts("/list - Ver usuarios conectados")
-        IO.puts("/cerrar - Salir del sistema")
-      end
-
-      defp mostrar_menu(_sala) do
-        IO.puts("\nComandos disponibles:")
-        IO.puts("/msg <mensaje> - Enviar un mensaje a la sala")
-        IO.puts("/history - Ver el historial de mensajes")
-        IO.puts("/buscar <palabra> - Buscar mensajes en la sala")
-        IO.puts("/salir - Salir de la sala")
-      end
     end
 
-    NodoCliente.main()
+    defp mostrar_menu(nil) do
+      IO.puts("\nComandos disponibles:")
+      IO.puts("/crear <nombre de la sala> - Crear una nueva sala")
+      IO.puts("/unirse <nombre de la sala> - Unirse a una sala existente")
+      IO.puts("/list - Ver usuarios conectados")
+      IO.puts("/cerrar - Salir del sistema")
+    end
+
+    defp mostrar_menu(_sala) do
+      IO.puts("\nComandos disponibles:")
+      IO.puts("/msg <mensaje> - Enviar un mensaje a la sala")
+      IO.puts("/history - Ver el historial de mensajes")
+      IO.puts("/buscar <palabra> - Buscar mensajes en la sala")
+      IO.puts("/salir - Salir de la sala")
+  end
+end
+
+NodoCliente.main()

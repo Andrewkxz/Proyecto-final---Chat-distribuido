@@ -12,20 +12,28 @@ defmodule Sala do
         loop(nombre_sala, [usuario | usuarios])
 
       {:mensaje_sala, de, mensaje} ->
-        enviar_a_todos(usuarios, "[#{de}]: #{mensaje}")
+        fecha_hora = DateTime.utc_now() |> Calendar.strftime("%H:%M")
+        mensaje_completo = "[#{de}]: #{mensaje}"
+        mensaje_con_fecha = "[#{fecha_hora}] #{mensaje_completo}"
+        enviar_mensaje_a_todos(usuarios, mensaje_con_fecha)
+        guardar_mensaje(nombre_sala, mensaje_con_fecha)
         :timer.sleep(200)
         loop(nombre_sala, usuarios)
 
       {:salir, usuario} ->
         nuevos = Enum.reject(usuarios, fn usr -> usr.pid == usuario.pid end)
-        enviar_a_todos(nuevos, "#{usuario.nombre} ha dejado la sala.")
+        enviar_mensaje_a_todos(nuevos, "#{usuario.nombre} ha dejado la sala.")
         :timer.sleep(300)
         loop(nombre_sala, nuevos)
       end
     end
 
-    defp enviar_a_todos(usuarios, mensaje) do
-      Enum.each(usuarios, fn %Usuario{pid: pid} ->
-        send(pid, {:mensaje_nuevo, mensaje}) end)
-      end
-    end
+  defp enviar_mensaje_a_todos(usuarios, mensaje) do
+    Enum.each(usuarios, fn %Usuario{pid: pid} ->
+      send(pid, {:mensaje_nuevo, mensaje}) end)
+  end
+
+  defp guardar_mensaje(nombre_sala, mensaje) do
+    File.write!("historial_#{nombre_sala}.txt", mensaje <> "\n", [:append])
+  end
+end
