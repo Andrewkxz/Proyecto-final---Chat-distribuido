@@ -75,8 +75,6 @@ defmodule NodoCliente do
         Util.mostrar_error("Comando invalido o no te encuentras en una sala.")
         mostrar_menu(sala_actual)
       end
-
-
       recibir_respuesta(usuario, sala_actual)
     end
 
