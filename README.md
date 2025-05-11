@@ -12,16 +12,18 @@ Este sistema aprovecha la concurrencia que ofrece Elixir para garantizar escalab
 
 ## Estructura del Proyecto
 
-nodo_cliente/ # Código fuente del cliente
-nodo_servidor/ # Código fuente del servidor
-cookies/ # Código fuente de las cookies
-sala/ # Código fuente de la sala
-supervisor/ # Código fuente del supervisor
-usuario/ # Código fuente del usuario
-util/ # Código fuente de utilidades
-docs/ # Documentación técnica y manuales
-tests/ # Scripts y resultados de pruebas de carga
-README.md # Este documento
+```plaintext
+nodo_cliente.exs     # Código fuente del cliente
+nodo_servidor.exs    # Código fuente del servidor
+cookies.exs          # Código fuente de las cookies
+sala.ex              # Código fuente de la sala
+supervisor.exs       # Código fuente del supervisor
+usuario.ex           # Código fuente del usuario
+util.ex              # Código fuente de utilidades
+docs/                # Documentación técnica y manuales
+tests/               # Scripts y resultados de pruebas de carga
+README.md            # Este documento
+```
 
 ## Requisitos
 
