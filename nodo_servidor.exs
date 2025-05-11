@@ -10,7 +10,7 @@ defmodule NodoServidor do
 
   defp loop(salas, historial, usuarios) do
     receive do
-      {:autenticacion, pid, usuario= %Usuario{nombre: nombre}} ->
+      {:autenticacion, pid, usuario = %Usuario{nombre: nombre}} ->
         nuevos_usuarios = Map.put(usuarios, nombre, usuario)
         send(pid, {:autenticado, true})
         log_evento("Usuario #{nombre} autenticado correctamente.")
@@ -28,10 +28,12 @@ defmodule NodoServidor do
 
       {:unirse_sala, pid, usuario, nombre_sala} ->
         case Map.get(salas, nombre_sala) do
-          nil -> send(pid, {:error, "La sala no existe."})
+          nil ->
+            send(pid, {:error, "La sala no existe."})
           sala_pid ->
             send(sala_pid, {:unir, usuario})
             send(pid, {:unido, nombre_sala})
+            log_evento("#{usuario.nombre} se unió a la sala #{nombre_sala}.")
         end
         loop(salas, historial, usuarios)
 
@@ -60,10 +62,9 @@ defmodule NodoServidor do
           {:ok, contenido} ->
             mensajes = String.split(contenido, "\n", trim: true)
             send(pid, {:historial, mensajes})
-
           {:error, _} ->
             send(pid, {:historial, []})
-          end
+        end
         loop(salas, historial, usuarios)
 
       {:buscar_mensaje, pid, nombre_sala, palabra} ->
@@ -72,7 +73,6 @@ defmodule NodoServidor do
             mensajes = String.split(contenido, "\n", trim: true)
             resultados = Enum.filter(mensajes, fn linea -> String.contains?(linea, palabra) end)
             send(pid, {:resultados_busqueda, resultados})
-
           {:error, _} ->
             send(pid, {:resultados_busqueda, []})
         end
@@ -84,5 +84,6 @@ defmodule NodoServidor do
     File.write!("log.txt", "[#{DateTime.utc_now()}] #{mensaje}\n", [:append])
   end
 end
+
 
 NodoServidor.main()
