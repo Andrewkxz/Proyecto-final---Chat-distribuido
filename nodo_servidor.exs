@@ -37,11 +37,11 @@ defmodule NodoServidor do
         end
         loop(salas, historial, usuarios)
 
-      {:mensaje_sala, nombre_sala, de, mensaje} ->
+      {:mensaje_sala, nombre_sala, de, mensaje_cifrado} ->
         case Map.get(salas, nombre_sala) do
           nil -> loop(salas, historial, usuarios)
           sala_pid ->
-            send(sala_pid, {:mensaje_sala, de, mensaje})
+            send(sala_pid, {:mensaje_sala, de, mensaje_cifrado})
             loop(salas, historial, usuarios)
         end
 
@@ -71,14 +71,27 @@ defmodule NodoServidor do
         case File.read("historial_#{nombre_sala}.txt") do
           {:ok, contenido} ->
             mensajes = String.split(contenido, "\n", trim: true)
-            resultados = Enum.filter(mensajes, fn linea -> String.contains?(linea, palabra) end)
+
+            resultados = Enum.filter(mensajes, fn linea ->
+              case String.split(linea, "] ", parts: 2) do
+                [_fecha_hora, contenido] ->
+                  case String.split(contenido, ": ", parts: 2) do
+                    [_usuario, mensaje_cifrado] ->
+                      mensaje_descifrado = Util.descifrar_mensaje(mensaje_cifrado)
+                      String.contains?(mensaje_descifrado, palabra)
+                    _ -> false
+                  end
+                _ -> false
+              end
+            end)
             send(pid, {:resultados_busqueda, resultados})
           {:error, _} ->
             send(pid, {:resultados_busqueda, []})
-        end
+          end
         loop(salas, historial, usuarios)
-    end
+        end
   end
+
 
   defp log_evento(mensaje) do
     File.write!("log.txt", "[#{DateTime.utc_now()}] #{mensaje}\n", [:append])
