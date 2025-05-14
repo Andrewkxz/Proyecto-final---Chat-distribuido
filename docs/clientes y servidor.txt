@@ -1,0 +1,14 @@
+servidor: 
+elixir --sname servidor --cookie my_cookie nodo_servidor.exs
+
+cliente1:
+elixir --sname cliente1 --cookie my_cookie nodo_cliente.exs
+
+cliente2:
+elixir --sname cliente2 --cookie my_cookie nodo_cliente.exs
+
+cliente3:
+elixir --sname cliente3 --cookie my_cookie nodo_cliente.exs
+
+cliente4:
+elixir --sname cliente4 --cookie my_cookie nodo_cliente.exs
