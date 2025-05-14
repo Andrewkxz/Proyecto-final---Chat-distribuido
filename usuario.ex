@@ -1,6 +1,5 @@
 defmodule Usuario do
-  defstruct nombre: "", pid: nil
-
+  defstruct nombre: "", pid: nil, contrasena: nil
   @usuarios "usuarios.txt"
 
   def autenticar() do
@@ -18,6 +17,7 @@ defmodule Usuario do
           autenticar()
         end
 
+
       :error ->
         Util.mostrar_mensaje("Registrando usuario...")
         registrar_usuario(nombre, contrasena)
@@ -33,15 +33,29 @@ defmodule Usuario do
             [nombre_guardado, contrasena_guardada] when nombre_guardado == nombre ->
               {:ok, contrasena_guardada}
             _ -> nil
-            end
-          end)
-        else
-            :error
-        end
-      end
+          end
+        end)
+      else
+        :error
+    end
+    end
 
   defp registrar_usuario(nombre, contrasena) do
     File.write!(@usuarios, "#{nombre}:#{contrasena}\n", [:append])
     Util.mostrar_mensaje("Usuario registrado con éxito")
+  end
+
+  def cargar_usuarios() do
+    if File.exists?(@usuarios) do
+      File.stream!(@usuarios)
+      |> Enum.reduce(%{}, fn linea, acc ->
+        case String.split(String.trim(linea), ":") do
+          [nombre, contrasena] -> Map.put(acc, nombre, %Usuario{nombre: nombre, pid: nil, contrasena: contrasena})
+          _ -> acc
+        end
+      end)
+    else
+      %{}
+    end
   end
 end
