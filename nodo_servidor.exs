@@ -94,7 +94,12 @@ defmodule NodoServidor do
 
 
   defp log_evento(mensaje) do
-    File.write!("log.txt", "[#{DateTime.utc_now()}] #{mensaje}\n", [:append])
+    hora_colombia = DateTime.utc_now() |> DateTime.add(-5 * 3600, :second)
+    fecha_hora = Calendar.strftime(hora_colombia, "%I:%M %p")
+    |> String.downcase()
+    |> String.replace("am", "a.m.")
+    |> String.replace("pm", "p.m.")
+    File.write!("log.txt", "[#{fecha_hora}] #{mensaje}\n", [:append])
   end
 end
 
