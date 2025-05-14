@@ -31,18 +31,6 @@ defmodule NodoCliente do
     if mostrar_menu?, do: mostrar_menu(sala_actual)
 
     receive do
-      {:mensaje_nuevo, mensaje} ->
-        [fecha_hora | contenido] = String.split(mensaje, "] ", parts: 2)
-        case String.split(Enum.join(contenido), ": ", parts: 2) do
-          [usuario, mensaje_cifrado] ->
-            mensaje_descifrado = Util.descifrar_mensaje(mensaje_cifrado)
-            IO.puts("\n[#{String.trim_leading(fecha_hora, "[")}] #{usuario}: #{mensaje_descifrado}")
-          _ ->
-            IO.puts("\n[#{String.trim_leading(fecha_hora, "[")}] #{Enum.join(contenido)}") # fallback
-        end
-
-
-        loop(usuario, sala_actual, servidor_node, false)
       {:historial, mensajes} ->
         IO.puts("\nHistorial de mensajes:")
         Enum.each(mensajes, fn linea ->
