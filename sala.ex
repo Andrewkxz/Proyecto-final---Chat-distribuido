@@ -18,7 +18,11 @@ defmodule Sala do
         loop(nombre_sala, usuarios_actualizados, mensajes)
 
       {:mensaje_sala, de, mensaje} ->
-        fecha_hora = DateTime.utc_now() |> Calendar.strftime("%H:%M")
+        hora_colombia = DateTime.utc_now() |> DateTime.add(-5 * 3600, :second)
+        fecha_hora = Calendar.strftime(hora_colombia, "%I:%M %p")
+        |> String.downcase()
+        |> String.replace("am", "a.m.")
+        |> String.replace("pm", "p.m.")
         mensaje_con_fecha = "[#{fecha_hora}] #{de}: #{mensaje}"
         mensajes_actualizados = mensajes ++ [mensaje_con_fecha]
         enviar_mensaje_a_todos(usuarios, mensaje_con_fecha)

@@ -57,6 +57,7 @@ defmodule NodoCliente do
               end
             end
         end)
+        :timer.sleep(500)
         loop(usuario, sala_actual, servidor_node, false)
 
       {:resultados_busqueda, resultados} ->
@@ -77,11 +78,13 @@ defmodule NodoCliente do
               end
           end)
         end
+        :timer.sleep(500)
         loop(usuario, sala_actual, servidor_node, false)
 
       {:usuarios, lista} ->
         IO.puts("\nUsuarios conectados:")
         Enum.each(lista, &IO.puts("  - #{&1}"))
+        :timer.sleep(500)
         loop(usuario, sala_actual, servidor_node, false)
 
       {:sala_creada, nombre_sala} ->
@@ -166,12 +169,17 @@ defmodule NodoCliente do
       ["/help"] ->
         mostrar_menu(sala_actual)
 
-      ["/salir"] when sala_actual != nil ->
-        send({:servidor, servidor_node}, {:salir_sala, usuario, sala_actual})
+      ["/salir"]  ->
+        if sala_actual != nil do
+          send({:servidor, servidor_node}, {:salir_sala, usuario, sala_actual})
+        else
+          Util.mostrar_error("No estás en ninguna sala.")
+        end
 
       ["/cerrar"] ->
         Util.mostrar_mensaje("Cerrando sesión...")
         :timer.sleep(500)
+        send({:servidor, servidor_node}, {:salir, self()})
         exit(:normal)
 
       _ ->
