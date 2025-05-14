@@ -17,6 +17,7 @@ defmodule NodoCliente do
     receive do
       {:autenticado, true} ->
         Util.mostrar_mensaje("Bienvenido #{usuario.nombre} :D")
+        spawn(fn -> recibir_mensajes() end)
         loop(usuario, nil, servidor_node, true)
 
       {:autenticado, false} ->
@@ -199,5 +200,21 @@ defmodule NodoCliente do
     IO.puts("/cerrar - Cerrar sesión por completo")
   end
 end
+
+  defp recibir_mensajes do
+    receive do
+      {:mensaje_nuevo, mensaje} ->
+        [fecha_hora | contenido] = String.split(mensaje, "] ", parts: 2)
+
+        case String.split(Enum.join(contenido), ": ", parts: 2) do
+          [usuario, mensaje_cifrado] ->
+            mensaje_descifrado = Util.descifrar_mensaje(mensaje_cifrado)
+            IO.puts("\n[#{String.trim_leading(fecha_hora, "[")}] #{usuario}: #{mensaje_descifrado}")
+          _ ->
+            IO.puts("\n[#{String.trim_leading(fecha_hora, "[")}] #{Enum.join(contenido)}")
+          end
+        end
+        recibir_mensajes()
+      end
 
 NodoCliente.main()
