@@ -30,11 +30,14 @@ defmodule Sala do
         :timer.sleep(200)
         loop(nombre_sala, usuarios, mensajes_actualizados)
 
-      {:salir, usuario = %Usuario{}} ->
-        nuevos = Enum.reject(usuarios, fn %Usuario{nombre: nombre} -> nombre == usuario.nombre end)
-        enviar_mensaje_a_todos(nuevos, "[INFO] #{usuario.nombre} ha salido de la sala.")
+      {:salir, %Usuario{nombre: nombre_usuario} = usuario} ->
+        nuevos_usuarios = Enum.reject(usuarios, fn %Usuario{nombre: nombre} -> nombre == nombre_usuario end)
+        IO.puts("El usuario #{nombre_usuario} ha salido de la sala.")
+        enviar_mensaje_a_todos(nuevos_usuarios, "[INFO] #{nombre_usuario} ha salido de la sala.")
+        send(usuario.pid, {:salida_sala, nombre_sala})
         :timer.sleep(300)
-        loop(nombre_sala, nuevos, mensajes)
+        loop(nombre_sala, nuevos_usuarios, mensajes)
+
     end
   end
 

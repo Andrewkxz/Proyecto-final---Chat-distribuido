@@ -172,8 +172,10 @@ defmodule NodoCliente do
       ["/salir"]  ->
         if sala_actual != nil do
           send({:servidor, servidor_node}, {:salir_sala, usuario, sala_actual})
+          loop(usuario, nil, servidor_node, true)
         else
           Util.mostrar_error("No estás en ninguna sala.")
+          loop(usuario, sala_actual, servidor_node, false)
         end
 
       ["/cerrar"] ->
