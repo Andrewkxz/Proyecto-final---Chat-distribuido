@@ -19,12 +19,48 @@ defmodule NodoCliente do
     receive do
       {:autenticado, true} ->
         Util.mostrar_mensaje("Bienvenido #{usuario.nombre} :D")
-        loop(usuario, nil, servidor_node, true)
+
+        spawn(fn -> escuchar_mensajes(usuario, servidor_node) end)
+
+        loop_comandos(usuario, nil, servidor_node)
 
       {:autenticado, false} ->
         Util.mostrar_error("Credenciales incorrectas. Intenta de nuevo.")
         main()
     end
+  end
+
+  defp escuchar_mensajes(usuario, servidor_node) do
+    receive do
+      {:mensaje_nuevo, mensaje} ->
+      mostrar_mensaje(mensaje)
+
+      {:historial, mensajes} ->
+        IO.puts("\nHistorial de mensajes:")
+        Enum.each(mensajes, &mostrar_mensaje/1)
+
+      {:resultados_busqueda, resultados} ->
+        IO.puts("\nResultados encontrados:")
+        if resultados == [], do: IO.puts("  - No se encontraron mensajes que contengan la palabra buscada.")
+        Enum.each(resultados, &mostrar_mensaje/1)
+
+      {:usuarios, lista} ->
+        IO.puts("\nUsuarios conectados:")
+        Enum.each(lista, &IO.puts("  - #{&1}"))
+
+      {:sala_creada, nombre_sala} ->
+        Util.mostrar_mensaje("Sala #{nombre_sala} creada.")
+
+      {:unido, nombre_sala} ->
+        Util.mostrar_mensaje("Te has unido a la sala #{nombre_sala}.")
+
+      {:salida_sala, nombre_sala} ->
+        Util.mostrar_mensaje("Has salido de la sala #{nombre_sala}.")
+
+      {:error, mensaje} ->
+        Util.mostrar_error(mensaje)
+      end
+      escuchar_mensajes(usuario, servidor_node)
   end
 
   defp loop(usuario, sala_actual, servidor_node, mostrar_menu?) do
@@ -107,6 +143,21 @@ defmodule NodoCliente do
         solicitud = if sala_actual, do: "[#{sala_actual}] > ", else: "> "
         salida = Util.ingresar(solicitud, :texto)
         procesar_comando(salida, usuario, sala_actual, servidor_node)
+    end
+  end
+
+  defp loop_comandos(usuario, sala_actual, servidor_node) do
+    loop(usuario, sala_actual, servidor_node, true)
+  end
+
+  defp mostrar_mensaje(mensaje) do
+    [fecha_hora | contenido] = String.split(mensaje, "] ", parts: 2)
+    case String.split(Enum.join(contenido), ": ", parts: 2) do
+      [usuario, mensaje_cifrado] ->
+        mensaje_descifrado = Util.descifrar_mensaje(mensaje_cifrado)
+        IO.puts("\n[#{String.trim_leading(fecha_hora, "[")}] #{usuario}: #{mensaje_descifrado}")
+      _ ->
+        IO.puts("\n[#{String.trim_leading(fecha_hora, "[")}] #{Enum.join(contenido)}") # fallback
     end
   end
 

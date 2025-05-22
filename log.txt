@@ -18,6 +18,690 @@
 [2025-05-09 14:59:41.174000Z] Usuario stiven autenticado correctamente.
 [2025-05-09 14:59:58.853000Z] Usuario juli autenticado correctamente.
 [2025-05-09 15:00:45.807000Z] Usuario stiven autenticado correctamente.
-[2025-05-09 15:07:02.086000Z] Servidor iniciando en servidor@Andrewkxz
-[2025-05-09 15:09:13.443000Z] Servidor iniciando en servidor@Andrewkxz
-[2025-05-09 15:09:35.274000Z] Usuario stiven autenticado correctamente.
+[2025-05-11 02:41:10.162000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-11 02:41:37.157000Z] Usuario andres autenticado correctamente.
+[2025-05-11 02:42:34.162000Z] Usuario juli autenticado correctamente.
+[2025-05-11 03:13:33.751000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-11 03:20:18.249000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-11 03:44:22.682000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-11 03:44:44.953000Z] Usuario andres autenticado correctamente.
+[2025-05-11 03:45:13.616000Z] Usuario juli autenticado correctamente.
+[2025-05-11 03:54:00.370000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-11 03:54:22.494000Z] Usuario andres autenticado correctamente.
+[2025-05-11 03:54:41.884000Z] Usuario juli autenticado correctamente.
+[2025-05-11 04:02:16.316000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-11 04:02:42.900000Z] Usuario andres autenticado correctamente.
+[2025-05-11 04:03:05.040000Z] Usuario juli autenticado correctamente.
+[2025-05-11 04:03:37.019000Z] andres se unió a la sala y0.
+[2025-05-11 04:03:45.435000Z] juli se unió a la sala y0.
+[2025-05-11 04:11:47.523000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-11 04:12:07.617000Z] Usuario andres autenticado correctamente.
+[2025-05-11 04:12:29.387000Z] Usuario juli autenticado correctamente.
+[2025-05-11 04:12:42.049000Z] andres se unió a la sala k.
+[2025-05-11 04:12:49.436000Z] juli se unió a la sala k.
+[2025-05-11 04:27:38.367000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-11 04:27:55.661000Z] Usuario andres autenticado correctamente.
+[2025-05-11 04:28:15.142000Z] Usuario juli autenticado correctamente.
+[2025-05-11 04:28:32.999000Z] juli se unió a la sala xd.
+[2025-05-11 04:28:40.232000Z] andres se unió a la sala xd.
+[2025-05-11 04:41:00.261000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-11 04:41:16.574000Z] Usuario andres autenticado correctamente.
+[2025-05-11 04:41:33.520000Z] Usuario juli autenticado correctamente.
+[2025-05-11 04:41:46.462000Z] juli se unió a la sala dx.
+[2025-05-11 04:41:54.439000Z] andres se unió a la sala dx.
+[2025-05-12 00:27:16.445000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-12 00:28:41.357000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-12 00:29:06.435000Z] Usuario andres autenticado correctamente.
+[2025-05-12 00:29:31.931000Z] Usuario juli autenticado correctamente.
+[2025-05-12 00:29:50.568000Z] andres se unió a la sala oi.
+[2025-05-12 00:29:59.295000Z] juli se unió a la sala oi.
+[2025-05-12 00:47:58.331000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-12 00:50:03.471000Z] Usuario andres autenticado correctamente.
+[2025-05-12 00:50:28.791000Z] Usuario juli autenticado correctamente.
+[2025-05-12 00:50:46.851000Z] juli se unió a la sala g.
+[2025-05-12 00:50:53.341000Z] andres se unió a la sala g.
+[2025-05-12 00:54:20.825000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-12 00:54:42.266000Z] Usuario andres autenticado correctamente.
+[2025-05-12 00:55:00.959000Z] Usuario juli autenticado correctamente.
+[2025-05-12 00:55:11.907000Z] juli se unió a la sala p.
+[2025-05-12 00:55:18.149000Z] andres se unió a la sala p.
+[2025-05-12 01:08:39.852000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-12 01:08:56.702000Z] Usuario andres autenticado correctamente.
+[2025-05-12 01:09:15.675000Z] Usuario juli autenticado correctamente.
+[2025-05-12 01:09:30.164000Z] juli se unió a la sala t.
+[2025-05-12 01:09:36.699000Z] andres se unió a la sala t.
+[2025-05-12 01:22:43.517000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-12 01:23:01.886000Z] Usuario andres autenticado correctamente.
+[2025-05-12 01:23:20.003000Z] Usuario juli autenticado correctamente.
+[2025-05-12 01:23:28.302000Z] juli se unió a la sala y.
+[2025-05-12 01:23:34.518000Z] andres se unió a la sala y.
+[2025-05-12 01:33:00.134000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-12 01:33:15.868000Z] Usuario andres autenticado correctamente.
+[2025-05-12 01:33:37.089000Z] Usuario juli autenticado correctamente.
+[2025-05-12 01:33:48.231000Z] juli se unió a la sala i.
+[2025-05-12 01:33:53.434000Z] andres se unió a la sala i.
+[2025-05-12 01:44:55.516000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-12 01:45:12.185000Z] Usuario andres autenticado correctamente.
+[2025-05-12 01:45:30.235000Z] Usuario juli autenticado correctamente.
+[2025-05-12 01:45:48.579000Z] juli se unió a la sala j.
+[2025-05-12 01:45:54.899000Z] andres se unió a la sala j.
+[2025-05-12 02:03:37.958000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-12 02:03:54.756000Z] Usuario andres autenticado correctamente.
+[2025-05-12 02:04:20.204000Z] Usuario juli autenticado correctamente.
+[2025-05-12 02:04:32.602000Z] juli se unió a la sala h.
+[2025-05-12 02:04:38.514000Z] andres se unió a la sala h.
+[2025-05-12 02:17:35.205000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-12 02:17:48.801000Z] Usuario andres autenticado correctamente.
+[2025-05-12 02:18:03.319000Z] Usuario juli autenticado correctamente.
+[2025-05-12 02:18:17.207000Z] juli se unió a la sala f.
+[2025-05-12 02:18:26.387000Z] andres se unió a la sala f.
+[2025-05-12 02:29:24.042000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-12 02:29:39.026000Z] Usuario andres autenticado correctamente.
+[2025-05-12 02:29:51.357000Z] Usuario juli autenticado correctamente.
+[2025-05-12 02:30:05.335000Z] juli se unió a la sala d.
+[2025-05-12 02:30:10.050000Z] andres se unió a la sala d.
+[2025-05-13 21:20:39.320000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-13 21:21:07.064000Z] Usuario andres autenticado correctamente.
+[2025-05-13 21:21:57.968000Z] Usuario juli autenticado correctamente.
+[2025-05-13 21:22:12.917000Z] juli se unió a la sala s.
+[2025-05-13 21:22:17.527000Z] andres se unió a la sala s.
+[2025-05-13 21:47:22.305000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-13 21:47:37.821000Z] Usuario andres autenticado correctamente.
+[2025-05-13 21:48:01.155000Z] Usuario juli autenticado correctamente.
+[2025-05-13 21:48:24.198000Z] andres se unió a la sala z.
+[2025-05-13 21:48:30.791000Z] juli se unió a la sala z.
+[2025-05-13 21:52:09.685000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-13 21:52:22.708000Z] Usuario andres autenticado correctamente.
+[2025-05-13 21:52:38.792000Z] Usuario juli autenticado correctamente.
+[2025-05-13 21:52:52.224000Z] juli se unió a la sala x.
+[2025-05-13 21:53:06.816000Z] andres se unió a la sala x.
+[2025-05-13 22:52:22.796000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-13 22:57:08.852000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-13 22:57:20.955000Z] Usuario andres autenticado correctamente.
+[2025-05-13 22:57:40.733000Z] Usuario juli autenticado correctamente.
+[2025-05-13 22:58:00.151000Z] juli se unió a la sala a.
+[2025-05-13 22:58:08.770000Z] andres se unió a la sala a.
+[2025-05-13 23:26:12.743000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-13 23:41:10.976000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-13 23:41:22.811000Z] Usuario andres autenticado correctamente.
+[2025-05-13 23:41:37.195000Z] Usuario juli autenticado correctamente.
+[2025-05-13 23:41:48.217000Z] juli se unió a la sala q.
+[2025-05-13 23:41:54.923000Z] andres se unió a la sala q.
+[2025-05-13 18:56:22.686000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-13 18:56:38.763000Z] Usuario andres autenticado correctamente.
+[2025-05-13 18:56:56.814000Z] Usuario juli autenticado correctamente.
+[2025-05-13 18:57:13.434000Z] juli se unió a la sala r.
+[2025-05-13 18:57:20.469000Z] andres se unió a la sala r.
+[07:03 p.m.] Servidor iniciando en servidor@Andrewkxz
+[07:03 p.m.] Usuario andres autenticado correctamente.
+[07:04 p.m.] Usuario juli autenticado correctamente.
+[07:07 p.m.] juli se unió a la sala r.
+[07:07 p.m.] andres se unió a la sala r.
+[07:51 p.m.] Servidor iniciando en servidor@Andrewkxz
+[07:51 p.m.] Usuario andres autenticado correctamente.
+[08:02 p.m.] Servidor iniciando en servidor@Andrewkxz
+[08:03 p.m.] Usuario andres autenticado correctamente.
+[08:03 p.m.] Usuario juli autenticado correctamente.
+[08:03 p.m.] Sala 'j' creada por juli.
+[08:03 p.m.] juli se unió a la sala j.
+[08:03 p.m.] andres se unió a la sala j.
+[08:03 p.m.] Mensaje de andres en la sala j
+[08:04 p.m.] Mensaje de juli en la sala j
+[08:04 p.m.] Mensaje de andres en la sala j
+[08:04 p.m.] Mensaje de juli en la sala j
+[08:06 p.m.] El usuario andres se ha desconectado inesperadamente.
+[08:06 p.m.] juli salió de la sala j.
+[08:06 p.m.] Usuario andres autenticado correctamente.
+[08:06 p.m.] andres se unió a la sala j.
+[08:07 p.m.] andres salió de la sala j.
+[08:07 p.m.] Mensaje de andres en la sala j
+[08:07 p.m.] Mensaje de juli en la sala j
+[08:08 p.m.] Sala 'g' creada por juli.
+[08:09 p.m.] El usuario juli se ha desconectado.
+[08:09 p.m.] El usuario desconocido se ha desconectado inesperadamente.
+[08:09 p.m.] El usuario andres se ha desconectado.
+[08:09 p.m.] El usuario desconocido se ha desconectado inesperadamente.
+[08:10 p.m.] Usuario stiven autenticado correctamente.
+[08:12 p.m.] El usuario stiven se ha desconectado inesperadamente.
+[08:16 p.m.] Servidor iniciando en servidor@Andrewkxz
+[08:17 p.m.] Usuario andres autenticado correctamente.
+[08:17 p.m.] Usuario juli autenticado correctamente.
+[08:17 p.m.] Usuario nath autenticado correctamente.
+[08:18 p.m.] Sala 'hp' creada por nath.
+[08:18 p.m.] nath se unió a la sala hp.
+[08:18 p.m.] juli se unió a la sala hp.
+[08:18 p.m.] andres se unió a la sala hp.
+[08:18 p.m.] Mensaje de andres en la sala hp
+[08:19 p.m.] Mensaje de juli en la sala hp
+[08:19 p.m.] Mensaje de nath en la sala hp
+[08:19 p.m.] nath salió de la sala hp.
+[08:19 p.m.] Mensaje de nath en la sala hp
+[08:20 p.m.] nath salió de la sala hp.
+[08:20 p.m.] nath salió de la sala hp.
+[08:20 p.m.] Mensaje de juli en la sala hp
+[08:20 p.m.] El usuario nath se ha desconectado.
+[08:20 p.m.] El usuario desconocido se ha desconectado inesperadamente.
+[08:23 p.m.] juli salió de la sala hp.
+[08:45 p.m.] El usuario juli se ha desconectado inesperadamente.
+[08:45 p.m.] El usuario andres se ha desconectado inesperadamente.
+[08:48 p.m.] Servidor iniciando en servidor@Andrewkxz
+[08:49 p.m.] Usuario andres autenticado correctamente.
+[08:49 p.m.] Usuario juli autenticado correctamente.
+[08:49 p.m.] El usuario juli se ha desconectado inesperadamente.
+[08:49 p.m.] El usuario andres se ha desconectado inesperadamente.
+[08:50 p.m.] Servidor iniciando en servidor@Andrewkxz
+[08:50 p.m.] Usuario andres autenticado correctamente.
+[08:50 p.m.] Usuario juli autenticado correctamente.
+[08:50 p.m.] Usuario nath autenticado correctamente.
+[08:50 p.m.] Sala 'ph' creada por nath.
+[08:51 p.m.] nath se unió a la sala ph.
+[08:51 p.m.] juli se unió a la sala ph.
+[08:51 p.m.] andres se unió a la sala ph.
+[08:51 p.m.] Mensaje de nath en la sala ph
+[08:51 p.m.] Mensaje de juli en la sala ph
+[08:51 p.m.] Mensaje de andres en la sala ph
+[08:52 p.m.] nath salió de la sala ph.
+[08:52 p.m.] Mensaje de juli en la sala ph
+[08:52 p.m.] Sala 'gh' creada por nath.
+[08:52 p.m.] nath se unió a la sala gh.
+[08:53 p.m.] El usuario nath se ha desconectado.
+[08:53 p.m.] El usuario desconocido se ha desconectado inesperadamente.
+[08:53 p.m.] El usuario juli se ha desconectado.
+[08:53 p.m.] El usuario desconocido se ha desconectado inesperadamente.
+[08:53 p.m.] El usuario andres se ha desconectado.
+[08:53 p.m.] El usuario desconocido se ha desconectado inesperadamente.
+[09:35 p.m.] Servidor iniciando en servidor@Andrewkxz
+[09:35 p.m.] Usuario andres autenticado correctamente.
+[09:35 p.m.] Usuario juli autenticado correctamente.
+[09:35 p.m.] Sala 'cv' creada por juli.
+[09:35 p.m.] juli se unió a la sala cv.
+[09:35 p.m.] andres se unió a la sala cv.
+[09:36 p.m.] Mensaje de andres en la sala cv
+[09:36 p.m.] Mensaje de juli en la sala cv
+[09:46 p.m.] El usuario juli se ha desconectado inesperadamente.
+[09:46 p.m.] El usuario andres se ha desconectado inesperadamente.
+[09:47 p.m.] Servidor iniciando en servidor@Andrewkxz
+[09:47 p.m.] Usuario andres autenticado correctamente.
+[09:47 p.m.] Usuario juli autenticado correctamente.
+[09:47 p.m.] Sala 'fg' creada por juli.
+[09:47 p.m.] juli se unió a la sala fg.
+[09:48 p.m.] andres se unió a la sala fg.
+[09:48 p.m.] Mensaje de andres en la sala fg
+[09:48 p.m.] Mensaje de juli en la sala fg
+[09:48 p.m.] El usuario juli se ha desconectado inesperadamente.
+[09:48 p.m.] El usuario andres se ha desconectado inesperadamente.
+[09:49 p.m.] Servidor iniciando en servidor@Andrewkxz
+[09:49 p.m.] Usuario andres autenticado correctamente.
+[09:50 p.m.] Usuario juli autenticado correctamente.
+[09:50 p.m.] Sala 'fg' creada por juli.
+[09:50 p.m.] juli se unió a la sala fg.
+[09:50 p.m.] andres se unió a la sala fg.
+[09:50 p.m.] Mensaje de andres en la sala fg
+[09:51 p.m.] Mensaje de juli en la sala fg
+[09:51 p.m.] El usuario juli se ha desconectado inesperadamente.
+[09:51 p.m.] El usuario andres se ha desconectado inesperadamente.
+[10:12 p.m.] Servidor iniciando en servidor@Andrewkxz
+[10:12 p.m.] Usuario andres autenticado correctamente.
+[10:13 p.m.] Usuario juli autenticado correctamente.
+[10:13 p.m.] Sala 'df' creada por juli.
+[10:13 p.m.] juli se unió a la sala df.
+[10:13 p.m.] andres se unió a la sala df.
+[10:29 p.m.] Servidor iniciando en servidor@Andrewkxz
+[10:29 p.m.] Usuario andres autenticado correctamente.
+[10:29 p.m.] Usuario juli autenticado correctamente.
+[10:29 p.m.] Sala 'sd' creada por andres.
+[10:29 p.m.] andres se unió a la sala sd.
+[10:30 p.m.] juli se unió a la sala sd.
+[10:30 p.m.] Mensaje de andres en la sala sd
+[10:30 p.m.] Mensaje de juli en la sala sd
+[10:53 p.m.] El usuario juli se ha desconectado inesperadamente.
+[02:12 p.m.] Servidor iniciando en servidor@Andrewkxz
+[02:12 p.m.] Usuario andres autenticado correctamente.
+[02:13 p.m.] El usuario andres se ha desconectado inesperadamente.
+[01:33 p.m.] Servidor iniciando en servidor@Andrewkxz
+[01:34 p.m.] Usuario andres autenticado correctamente.
+[01:34 p.m.] Usuario juli autenticado correctamente.
+[01:35 p.m.] Usuario nath autenticado correctamente.
+[01:35 p.m.] Sala 'vb' creada por nath.
+[01:35 p.m.] nath se unió a la sala vb.
+[01:35 p.m.] juli se unió a la sala vb.
+[01:35 p.m.] andres se unió a la sala vb.
+[01:35 p.m.] Mensaje de nath en la sala vb
+[01:36 p.m.] Mensaje de juli en la sala vb
+[01:36 p.m.] Mensaje de andres en la sala vb
+[01:37 p.m.] andres salió de la sala vb.
+[01:37 p.m.] Sala 'bv' creada por andres.
+[01:37 p.m.] andres se unió a la sala bv.
+[01:38 p.m.] Mensaje de andres en la sala bv
+[01:38 p.m.] El usuario andres se ha desconectado.
+[01:38 p.m.] El usuario desconocido se ha desconectado inesperadamente.
+[01:38 p.m.] El usuario nath se ha desconectado.
+[01:38 p.m.] El usuario desconocido se ha desconectado inesperadamente.
+[01:39 p.m.] El usuario juli se ha desconectado inesperadamente.
+[07:49 p.m.] Servidor iniciando en servidor@Andrewkxz
+[07:49 p.m.] Usuario andres autenticado correctamente.
+[07:50 p.m.] Usuario juli autenticado correctamente.
+[07:50 p.m.] Usuario nath autenticado correctamente.
+[07:57 p.m.] El usuario nath se ha desconectado inesperadamente.
+[07:57 p.m.] El usuario juli se ha desconectado inesperadamente.
+[07:57 p.m.] Servidor iniciando en servidor@Andrewkxz
+[07:57 p.m.] Usuario andres autenticado correctamente.
+[07:58 p.m.] Usuario juli autenticado correctamente.
+[07:58 p.m.] Usuario nath autenticado correctamente.
+[07:58 p.m.] Sala 'as' creada por .
+[07:58 p.m.] nath se unió a la sala as.
+[07:58 p.m.] juli se unió a la sala as.
+[07:58 p.m.] andres se unió a la sala as.
+[08:01 p.m.] El usuario desconocido se ha desconectado.
+[08:15 p.m.] El usuario andres se ha desconectado inesperadamente.
+[08:15 p.m.] El usuario nath se ha desconectado inesperadamente.
+[08:15 p.m.] El usuario juli se ha desconectado inesperadamente.
+[08:16 p.m.] Servidor iniciando en servidor@Andrewkxz
+[08:16 p.m.] Usuario andres autenticado correctamente.
+[08:16 p.m.] Usuario juli autenticado correctamente.
+[08:16 p.m.] Usuario nath autenticado correctamente.
+[08:17 p.m.] Sala 'as' creada por nath.
+[08:17 p.m.] nath se unió a la sala as.
+[08:17 p.m.] juli se unió a la sala as.
+[08:17 p.m.] andres se unió a la sala as.
+[08:23 p.m.] El usuario nath se ha desconectado inesperadamente.
+[08:23 p.m.] El usuario andres se ha desconectado inesperadamente.
+[08:23 p.m.] Servidor iniciando en servidor@Andrewkxz
+[08:23 p.m.] Usuario andres autenticado correctamente.
+[08:23 p.m.] Usuario juli autenticado correctamente.
+[08:24 p.m.] Sala 'as' creada por juli.
+[08:24 p.m.] juli se unió a la sala as.
+[08:24 p.m.] andres se unió a la sala as.
+[08:25 p.m.] El usuario juli se ha desconectado inesperadamente.
+[09:21 p.m.] Servidor iniciando en servidor@Andrewkxz
+[09:21 p.m.] Usuario andres autenticado correctamente.
+[09:21 p.m.] Usuario juli autenticado correctamente.
+[09:21 p.m.] Usuario nath autenticado correctamente.
+[09:21 p.m.] Sala 'as' creada por nath.
+[09:21 p.m.] nath se unió a la sala as.
+[09:22 p.m.] juli se unió a la sala as.
+[09:22 p.m.] andres se unió a la sala as.
+[09:22 p.m.] Mensaje de andres en la sala as
+[09:22 p.m.] Mensaje de juli en la sala as
+[09:22 p.m.] Mensaje de nath en la sala as
+[09:28 p.m.] El usuario nath se ha desconectado inesperadamente.
+[09:28 p.m.] El usuario juli se ha desconectado inesperadamente.
+[09:28 p.m.] El usuario andres se ha desconectado inesperadamente.
+[2025-05-16 02:30:45.336000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-16 02:30:55.242000Z] Usuario andres autenticado correctamente.
+[2025-05-16 02:31:13.253000Z] Usuario juli autenticado correctamente.
+[2025-05-16 02:35:44.742000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-16 02:35:56.194000Z] Usuario andres autenticado correctamente.
+[2025-05-16 02:36:08.787000Z] Usuario juli autenticado correctamente.
+[2025-05-16 02:40:23.920000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-16 02:40:35.045000Z] Usuario andres autenticado correctamente.
+[2025-05-16 02:40:46.372000Z] Usuario juli autenticado correctamente.
+[2025-05-16 02:45:36.751000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-16 02:45:50.478000Z] Usuario andres autenticado correctamente.
+[2025-05-16 02:46:01.701000Z] Usuario juli autenticado correctamente.
+[2025-05-16 02:52:33.509000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-16 02:52:44.038000Z] Usuario andres autenticado correctamente.
+[2025-05-16 02:52:55.564000Z] Usuario juli autenticado correctamente.
+[2025-05-16 03:00:44.897000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-16 03:00:54.659000Z] Usuario andres autenticado correctamente.
+[2025-05-16 03:01:08.017000Z] Usuario juli autenticado correctamente.
+[10:15 p.m.] Servidor iniciando en servidor@Andrewkxz
+[10:15 p.m.] Usuario andres autenticado correctamente.
+[10:15 p.m.] Usuario juli autenticado correctamente.
+[10:15 p.m.] Sala 'ad' creada por juli.
+[10:15 p.m.] juli se unió a la sala ad.
+[10:15 p.m.] andres se unió a la sala ad.
+[10:15 p.m.] Mensaje de andres en la sala ad
+[10:16 p.m.] Mensaje de juli en la sala ad
+[10:16 p.m.] Mensaje de juli en la sala ad
+[10:16 p.m.] Mensaje de andres en la sala ad
+[10:22 p.m.] El usuario juli se ha desconectado inesperadamente.
+[10:22 p.m.] El usuario andres se ha desconectado inesperadamente.
+[10:55 p.m.] Servidor iniciando en servidor@Andrewkxz
+[10:55 p.m.] Usuario andres autenticado correctamente.
+[10:55 p.m.] Usuario juli autenticado correctamente.
+[11:02 p.m.] El usuario juli se ha desconectado inesperadamente.
+[11:02 p.m.] El usuario andres se ha desconectado inesperadamente.
+[11:02 p.m.] Servidor iniciando en servidor@Andrewkxz
+[11:02 p.m.] Usuario andres autenticado correctamente.
+[11:04 p.m.] El usuario andres se ha desconectado inesperadamente.
+[11:04 p.m.] Usuario andres autenticado correctamente.
+[11:04 p.m.] El usuario andres se ha desconectado inesperadamente.
+[11:05 p.m.] Servidor iniciando en servidor@Andrewkxz
+[11:05 p.m.] Usuario andres autenticado correctamente.
+[11:06 p.m.] El usuario andres se ha desconectado inesperadamente.
+[11:06 p.m.] Usuario andres autenticado correctamente.
+[11:06 p.m.] El usuario andres se ha desconectado inesperadamente.
+[11:06 p.m.] Servidor iniciando en servidor@Andrewkxz
+[11:07 p.m.] Servidor iniciando en servidor@Andrewkxz
+[11:07 p.m.] Usuario andres autenticado correctamente.
+[11:08 p.m.] El usuario andres se ha desconectado inesperadamente.
+[11:08 p.m.] Servidor iniciando en servidor@Andrewkxz
+[11:09 p.m.] Usuario andres autenticado correctamente.
+[11:15 p.m.] El usuario andres se ha desconectado inesperadamente.
+[11:25 p.m.] Servidor iniciando en servidor@Andrewkxz
+[11:25 p.m.] Usuario andres autenticado correctamente.
+[11:25 p.m.] Usuario juli autenticado correctamente.
+[11:25 p.m.] Sala 'af' creada por juli.
+[11:25 p.m.] juli se unió a la sala af.
+[11:25 p.m.] andres se unió a la sala af.
+[11:26 p.m.] El usuario juli se ha desconectado.
+[11:26 p.m.] El usuario desconocido se ha desconectado inesperadamente.
+[11:30 p.m.] El usuario andres se ha desconectado inesperadamente.
+[11:30 p.m.] Servidor iniciando en servidor@Andrewkxz
+[11:30 p.m.] Usuario andres autenticado correctamente.
+[11:30 p.m.] Usuario juli autenticado correctamente.
+[11:30 p.m.] Sala 'af' creada por juli.
+[11:31 p.m.] juli se unió a la sala af.
+[11:31 p.m.] andres se unió a la sala af.
+[11:36 p.m.] El usuario andres se ha desconectado inesperadamente.
+[11:36 p.m.] El usuario juli se ha desconectado inesperadamente.
+[11:36 p.m.] Servidor iniciando en servidor@Andrewkxz
+[11:36 p.m.] Usuario andres autenticado correctamente.
+[11:37 p.m.] Usuario juli autenticado correctamente.
+[11:37 p.m.] Sala 'af' creada por juli.
+[11:37 p.m.] juli se unió a la sala af.
+[11:37 p.m.] andres se unió a la sala af.
+[11:38 p.m.] El usuario andres se ha desconectado inesperadamente.
+[11:38 p.m.] El usuario juli se ha desconectado inesperadamente.
+[2025-05-16 04:51:01.575000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-16 04:51:13.708000Z] Usuario andres autenticado correctamente.
+[2025-05-16 04:51:25.757000Z] Usuario juli autenticado correctamente.
+[2025-05-16 05:01:00.768000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-16 05:01:12.760000Z] Usuario andres autenticado correctamente.
+[2025-05-16 05:01:24.382000Z] Usuario juli autenticado correctamente.
+[2025-05-16 05:10:09.645000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-16 05:10:21.294000Z] Usuario andres autenticado correctamente.
+[2025-05-16 05:10:36.480000Z] Usuario juli autenticado correctamente.
+[2025-05-16 05:17:56.867000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-16 05:18:07.942000Z] Usuario andres autenticado correctamente.
+[2025-05-16 05:18:18.264000Z] Usuario juli autenticado correctamente.
+[2025-05-16 05:28:09.242000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-16 05:28:17.915000Z] Usuario andres autenticado correctamente.
+[2025-05-16 05:28:29.551000Z] Usuario juli autenticado correctamente.
+[2025-05-16 05:43:00.688000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-16 05:43:12.112000Z] Usuario andres autenticado correctamente.
+[2025-05-16 05:43:23.263000Z] Usuario juli autenticado correctamente.
+[2025-05-16 05:48:44.660000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-16 05:48:56.668000Z] Usuario andres autenticado correctamente.
+[2025-05-16 05:49:08.193000Z] Usuario juli autenticado correctamente.
+[2025-05-16 05:50:22.775000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-16 05:50:34.772000Z] Usuario andres autenticado correctamente.
+[2025-05-16 05:56:43.746000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-16 05:56:54.064000Z] Usuario andres autenticado correctamente.
+[2025-05-16 05:57:11.675000Z] Usuario juli autenticado correctamente.
+[2025-05-18 01:25:56.389000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-18 01:26:41.746000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-18 01:26:51.810000Z] Usuario andres autenticado correctamente.
+[2025-05-18 01:27:04.407000Z] Usuario juli autenticado correctamente.
+[2025-05-18 02:00:35.805000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-18 02:03:07.756000Z] Usuario andres autenticado correctamente.
+[2025-05-18 02:03:18.358000Z] Usuario juli autenticado correctamente.
+[2025-05-18 02:25:16.910000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-18 02:25:26.491000Z] Usuario andres autenticado correctamente.
+[2025-05-18 02:25:37.676000Z] Usuario juli autenticado correctamente.
+[2025-05-18 03:11:27.686000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-18 03:11:38.460000Z] Usuario andres autenticado correctamente.
+[2025-05-18 03:11:50.852000Z] Usuario juli autenticado correctamente.
+[2025-05-18 03:23:19.359000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-18 03:23:31.069000Z] Usuario andres autenticado correctamente.
+[2025-05-18 03:23:42.823000Z] Usuario juli autenticado correctamente.
+[2025-05-18 03:33:02.047000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-18 03:33:13.075000Z] Usuario andres autenticado correctamente.
+[2025-05-18 03:33:24.066000Z] Usuario juli autenticado correctamente.
+[2025-05-18 03:53:36.729000Z] Servidor iniciando en servidor@Andrewkxz
+[2025-05-18 03:53:56.421000Z] Usuario andres autenticado correctamente.
+[2025-05-18 03:54:26.444000Z] Usuario juli autenticado correctamente.
+[2025-05-18 03:54:44.944000Z] Usuario nath autenticado correctamente.
+[11:04 p.m.] Servidor iniciando en servidor@Andrewkxz
+[11:04 p.m.] Usuario andres autenticado correctamente.
+[11:04 p.m.] Usuario juli autenticado correctamente.
+[11:05 p.m.] Usuario nath autenticado correctamente.
+[11:05 p.m.] El usuario nath se ha desconectado inesperadamente.
+[11:05 p.m.] El usuario juli se ha desconectado inesperadamente.
+[11:10 p.m.] Servidor iniciando en servidor@Andrewkxz
+[11:11 p.m.] Usuario andres autenticado correctamente.
+[11:11 p.m.] Usuario juli autenticado correctamente.
+[11:11 p.m.] Usuario nath autenticado correctamente.
+[11:11 p.m.] Sala 'salap' creada por nath.
+[11:12 p.m.] nath se unió a la sala salap.
+[11:12 p.m.] andres se unió a la sala salap.
+[11:12 p.m.] juli se unió a la sala salap.
+[11:12 p.m.] Mensaje de nath en la sala salap
+[11:12 p.m.] Mensaje de andres en la sala salap
+[11:13 p.m.] Mensaje de juli en la sala salap
+[11:13 p.m.] nath salió de la sala salap.
+[11:13 p.m.] Sala 'a' creada por nath.
+[11:13 p.m.] nath se unió a la sala a.
+[11:14 p.m.] Mensaje de nath en la sala a
+[11:14 p.m.] Mensaje de andres en la sala salap
+[11:14 p.m.] nath salió de la sala a.
+[11:14 p.m.] El usuario nath se ha desconectado.
+[11:14 p.m.] El usuario desconocido se ha desconectado inesperadamente.
+[05:48 p.m.] Servidor iniciando en servidor@Andrewkxz
+[05:48 p.m.] Usuario andres autenticado correctamente.
+[05:48 p.m.] Usuario juli autenticado correctamente.
+[05:49 p.m.] El usuario juli se ha desconectado inesperadamente.
+[05:49 p.m.] El usuario andres se ha desconectado inesperadamente.
+[06:03 p.m.] Servidor iniciando en servidor@Andrewkxz
+[06:03 p.m.] Usuario andres autenticado correctamente.
+[06:03 p.m.] Usuario juli autenticado correctamente.
+[06:04 p.m.] Sala 'sala' creada por juli.
+[06:04 p.m.] juli se unió a la sala sala.
+[06:04 p.m.] andres se unió a la sala sala.
+[06:04 p.m.] Mensaje de juli en la sala sala
+[06:04 p.m.] Mensaje de andres en la sala sala
+[06:12 p.m.] El usuario andres se ha desconectado inesperadamente.
+[06:12 p.m.] El usuario juli se ha desconectado inesperadamente.
+[06:14 p.m.] Servidor iniciando en servidor@Andrewkxz
+[06:15 p.m.] Usuario andres autenticado correctamente.
+[06:15 p.m.] Usuario juli autenticado correctamente.
+[06:32 p.m.] Servidor iniciando en servidor@Andrewkxz
+[07:05 p.m.] Servidor iniciando en servidor@localhost
+[07:27 p.m.] Servidor iniciando en servidor@Andrewkxz
+[07:34 p.m.] Servidor iniciando en servidor@Andrewkxz
+[07:36 p.m.] Servidor iniciando en servidor@Andrewkxz
+[07:36 p.m.] Usuario andres autenticado correctamente.
+[08:19 p.m.] El usuario andres se ha desconectado inesperadamente.
+[08:20 p.m.] Servidor iniciando en servidor@192.168.100.91
+[08:22 p.m.] Servidor iniciando en cliente@192.168.100.91
+[08:24 p.m.] Servidor iniciando en servidor@Andrewkxz
+[08:24 p.m.] Usuario andres autenticado correctamente.
+[08:45 p.m.] El usuario andres se ha desconectado inesperadamente.
+[08:58 p.m.] Servidor iniciando en servidor@Andrewkxz
+[08:58 p.m.] Usuario andres autenticado correctamente.
+[09:00 p.m.] Usuario juli autenticado correctamente.
+[09:00 p.m.] Sala 'a' creada por juli.
+[09:00 p.m.] juli se unió a la sala a.
+[09:00 p.m.] andres se unió a la sala a.
+[09:00 p.m.] Mensaje de juli en la sala a
+[09:00 p.m.] Mensaje de andres en la sala a
+[09:01 p.m.] juli salió de la sala a.
+[09:01 p.m.] Mensaje de andres en la sala a
+[09:01 p.m.] Sala 'o' creada por juli.
+[09:01 p.m.] juli se unió a la sala o.
+[09:01 p.m.] Mensaje de juli en la sala o
+[09:02 p.m.] juli salió de la sala o.
+[09:02 p.m.] El usuario juli se ha desconectado.
+[09:02 p.m.] El usuario desconocido se ha desconectado inesperadamente.
+[09:02 p.m.] andres salió de la sala a.
+[09:02 p.m.] El usuario andres se ha desconectado.
+[09:02 p.m.] El usuario desconocido se ha desconectado inesperadamente.
+[10:22 p.m.] Servidor iniciando en servidor@Andrewkxz
+[10:22 p.m.] Usuario andres autenticado correctamente.
+[10:23 p.m.] Usuario juli autenticado correctamente.
+[10:23 p.m.] Sala 'o' creada por .
+[10:49 p.m.] El usuario juli se ha desconectado inesperadamente.
+[10:49 p.m.] El usuario andres se ha desconectado inesperadamente.
+[10:49 p.m.] Servidor iniciando en servidor@Andrewkxz
+[10:50 p.m.] Usuario andres autenticado correctamente.
+[10:50 p.m.] Usuario juli autenticado correctamente.
+[10:50 p.m.] Sala 'o' creada por juli.
+[10:50 p.m.] El usuario juli se ha desconectado inesperadamente.
+[10:52 p.m.] El usuario andres se ha desconectado inesperadamente.
+[05:35 p.m.] Servidor iniciando en servidor@Andrewkxz
+[05:55 p.m.] Servidor iniciando en servidor@Andrewkxz
+[05:57 p.m.] Servidor iniciando en servidor@Andrewkxz
+[07:00 p.m.] Servidor iniciando en servidor@Andrewkxz
+[07:01 p.m.] Usuario andres autenticado correctamente.
+[07:01 p.m.] Usuario juli autenticado correctamente.
+[07:02 p.m.] Sala 'si' creada por juli.
+[07:02 p.m.] juli se unió a la sala si.
+[07:02 p.m.] andres se unió a la sala si.
+[07:02 p.m.] Mensaje de juli en la sala si
+[07:02 p.m.] Mensaje de andres en la sala si
+[07:02 p.m.] Mensaje de juli en la sala si
+[07:06 p.m.] El usuario andres se ha desconectado inesperadamente.
+[07:06 p.m.] El usuario juli se ha desconectado inesperadamente.
+[07:07 p.m.] Servidor iniciando en servidor@Andrewkxz
+[07:07 p.m.] Usuario andres autenticado correctamente.
+[07:07 p.m.] Usuario juli autenticado correctamente.
+[07:07 p.m.] Sala 'si' creada por juli.
+[07:07 p.m.] juli se unió a la sala si.
+[07:07 p.m.] andres se unió a la sala si.
+[07:08 p.m.] Mensaje de juli en la sala si
+[07:08 p.m.] Mensaje de andres en la sala si
+[07:08 p.m.] El usuario andres se ha desconectado inesperadamente.
+[07:08 p.m.] El usuario juli se ha desconectado inesperadamente.
+[07:09 p.m.] Servidor iniciando en servidor@Andrewkxz
+[07:09 p.m.] Usuario andres autenticado correctamente.
+[07:09 p.m.] Usuario juli autenticado correctamente.
+[07:09 p.m.] Sala 'si' creada por juli.
+[07:09 p.m.] juli se unió a la sala si.
+[07:09 p.m.] andres se unió a la sala si.
+[07:10 p.m.] Mensaje de juli en la sala si
+[07:10 p.m.] Mensaje de andres en la sala si
+[07:32 p.m.] El usuario andres se ha desconectado inesperadamente.
+[07:32 p.m.] El usuario juli se ha desconectado inesperadamente.
+[07:32 p.m.] Servidor iniciando en servidor@Andrewkxz
+[07:33 p.m.] Usuario andres autenticado correctamente.
+[07:33 p.m.] Usuario juli autenticado correctamente.
+[07:34 p.m.] Sala 'si' creada por .
+[07:34 p.m.] juli se unió a la sala si.
+[07:34 p.m.] andres se unió a la sala si.
+[07:35 p.m.] El usuario juli se ha desconectado inesperadamente.
+[07:35 p.m.] El usuario andres se ha desconectado inesperadamente.
+[07:36 p.m.] Servidor iniciando en servidor@Andrewkxz
+[07:36 p.m.] Usuario andres autenticado correctamente.
+[07:37 p.m.] Usuario juli autenticado correctamente.
+[07:37 p.m.] Sala 'si' creada por .
+[07:37 p.m.] juli se unió a la sala si.
+[07:37 p.m.] andres se unió a la sala si.
+[07:43 p.m.] El usuario juli se ha desconectado inesperadamente.
+[07:43 p.m.] El usuario andres se ha desconectado inesperadamente.
+[07:43 p.m.] Servidor iniciando en servidor@Andrewkxz
+[07:44 p.m.] Usuario andres autenticado correctamente.
+[07:44 p.m.] Usuario juli autenticado correctamente.
+[07:44 p.m.] Sala 'si' creada por juli.
+[07:44 p.m.] juli se unió a la sala si.
+[07:44 p.m.] andres se unió a la sala si.
+[07:49 p.m.] El usuario andres se ha desconectado inesperadamente.
+[07:49 p.m.] El usuario juli se ha desconectado inesperadamente.
+[07:49 p.m.] Servidor iniciando en servidor@Andrewkxz
+[07:49 p.m.] Usuario andres autenticado correctamente.
+[07:49 p.m.] Usuario juli autenticado correctamente.
+[07:49 p.m.] Sala 'general' creada por juli.
+[07:50 p.m.] juli se unió a la sala general.
+[07:50 p.m.] andres se unió a la sala general.
+[07:52 p.m.] El usuario andres se ha desconectado inesperadamente.
+[07:52 p.m.] El usuario juli se ha desconectado inesperadamente.
+[07:54 p.m.] Servidor iniciando en servidor@Andrewkxz
+[07:54 p.m.] Usuario andres autenticado correctamente.
+[07:55 p.m.] Usuario juli autenticado correctamente.
+[07:55 p.m.] Sala 'si' creada por juli.
+[07:55 p.m.] juli se unió a la sala si.
+[07:55 p.m.] andres se unió a la sala si.
+[07:59 p.m.] El usuario andres se ha desconectado inesperadamente.
+[07:59 p.m.] El usuario juli se ha desconectado inesperadamente.
+[07:59 p.m.] Servidor iniciando en servidor@Andrewkxz
+[07:59 p.m.] Usuario aaandres autenticado correctamente.
+[07:59 p.m.] Usuario juli autenticado correctamente.
+[07:59 p.m.] Sala 'si' creada por juli.
+[07:59 p.m.] juli se unió a la sala si.
+[08:00 p.m.] Servidor iniciando en servidor@Andrewkxz
+[08:01 p.m.] Usuario andres autenticado correctamente.
+[08:01 p.m.] Usuario juli autenticado correctamente.
+[08:01 p.m.] Sala 'si' creada por juli.
+[08:01 p.m.] juli se unió a la sala si.
+[08:01 p.m.] andres se unió a la sala si.
+[08:01 p.m.] Mensaje de andres en la sala si
+[08:02 p.m.] Mensaje de juli en la sala si
+[08:02 p.m.] andres salió de la sala si.
+[08:04 p.m.] El usuario andres se ha desconectado inesperadamente.
+[08:04 p.m.] El usuario juli se ha desconectado inesperadamente.
+[08:05 p.m.] Servidor iniciando en servidor@Andrewkxz
+[08:07 p.m.] Servidor iniciando en servidor@Andrewkxz
+[08:07 p.m.] Usuario andres autenticado correctamente.
+[08:07 p.m.] Usuario juli autenticado correctamente.
+[08:07 p.m.] Sala 'si' creada por juli.
+[08:07 p.m.] juli se unió a la sala si.
+[08:07 p.m.] andres se unió a la sala si.
+[08:10 p.m.] El usuario andres se ha desconectado inesperadamente.
+[08:10 p.m.] El usuario juli se ha desconectado inesperadamente.
+[08:13 p.m.] Servidor iniciando en servidor@Andrewkxz
+[08:13 p.m.] Usuario andres autenticado correctamente.
+[08:13 p.m.] Usuario juli autenticado correctamente.
+[08:13 p.m.] Sala 'si' creada por juli.
+[08:13 p.m.] juli se unió a la sala si.
+[08:13 p.m.] andres se unió a la sala si.
+[08:14 p.m.] Mensaje de andres en la sala si
+[08:14 p.m.] Mensaje de juli en la sala si
+[08:17 p.m.] El usuario juli se ha desconectado inesperadamente.
+[08:17 p.m.] El usuario andres se ha desconectado inesperadamente.
+[08:18 p.m.] Servidor iniciando en servidor@Andrewkxz
+[08:19 p.m.] Usuario andres autenticado correctamente.
+[08:19 p.m.] Usuario juli autenticado correctamente.
+[08:19 p.m.] Sala 'si' creada por juli.
+[08:19 p.m.] juli se unió a la sala si.
+[08:19 p.m.] andres se unió a la sala si.
+[08:19 p.m.] Mensaje de juli en la sala si
+[08:19 p.m.] Mensaje de andres en la sala si
+[08:20 p.m.] Mensaje de juli en la sala si
+[08:20 p.m.] andres salió de la sala si.
+[08:28 p.m.] Servidor iniciando en servidor@Andrewkxz
+[08:28 p.m.] Usuario andres autenticado correctamente.
+[08:28 p.m.] Usuario juli autenticado correctamente.
+[08:28 p.m.] Sala 'si' creada por juli.
+[08:28 p.m.] juli se unió a la sala si.
+[08:28 p.m.] andres se unió a la sala si.
+[08:28 p.m.] Mensaje de juli en la sala si
+[08:39 p.m.] El usuario andres se ha desconectado inesperadamente.
+[08:39 p.m.] El usuario juli se ha desconectado inesperadamente.
+[08:39 p.m.] Servidor iniciando en servidor@Andrewkxz
+[08:40 p.m.] Usuario andres autenticado correctamente.
+[08:41 p.m.] El usuario andres se ha desconectado inesperadamente.
+[08:45 p.m.] Servidor iniciando en servidor@Andrewkxz
+[08:45 p.m.] Usuario andres autenticado correctamente.
+[08:46 p.m.] Usuario juli autenticado correctamente.
+[08:46 p.m.] Sala 'si' creada por juli.
+[08:46 p.m.] juli se unió a la sala si.
+[08:46 p.m.] andres se unió a la sala si.
+[08:46 p.m.] Mensaje de juli en la sala si
+[08:49 p.m.] El usuario andres se ha desconectado inesperadamente.
+[08:49 p.m.] El usuario juli se ha desconectado inesperadamente.
+[08:49 p.m.] Servidor iniciando en servidor@Andrewkxz
+[08:49 p.m.] Usuario andres autenticado correctamente.
+[08:50 p.m.] Usuario juli autenticado correctamente.
+[08:50 p.m.] Sala 'si' creada por juli.
+[08:50 p.m.] juli se unió a la sala si.
+[08:50 p.m.] andres se unió a la sala si.
+[08:50 p.m.] Mensaje de juli en la sala si
+[08:55 p.m.] El usuario andres se ha desconectado inesperadamente.
+[08:55 p.m.] El usuario juli se ha desconectado inesperadamente.
+[08:56 p.m.] Servidor iniciando en servidor@Andrewkxz
+[08:57 p.m.] Usuario andres autenticado correctamente.
+[08:57 p.m.] Usuario juli autenticado correctamente.
+[08:57 p.m.] Sala 'si' creada por juli.
+[08:57 p.m.] juli se unió a la sala si.
+[08:58 p.m.] andres se unió a la sala si.
+[08:59 p.m.] El usuario andres se ha desconectado inesperadamente.
+[08:59 p.m.] El usuario juli se ha desconectado inesperadamente.
+[09:05 p.m.] Servidor iniciando en servidor@Andrewkxz
+[09:05 p.m.] Usuario andres autenticado correctamente.
+[09:06 p.m.] Usuario juli autenticado correctamente.
+[09:06 p.m.] Sala 'si' creada por juli.
+[09:06 p.m.] juli se unió a la sala si.
+[09:06 p.m.] andres se unió a la sala si.
+[09:06 p.m.] El usuario andres se ha desconectado inesperadamente.
+[09:06 p.m.] El usuario juli se ha desconectado inesperadamente.
+[09:11 p.m.] Servidor iniciando en servidor@Andrewkxz
