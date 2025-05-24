@@ -28,6 +28,7 @@ defmodule NodoServidor do
       {:crear_sala, pid, nombre_sala} ->
         if Map.has_key?(salas, nombre_sala) do
           send(pid, {:error, "La sala ya existe."})
+          loop(salas, historial, usuarios, conectados_vivos)
         else
           Util.mostrar_mensaje("Creando sala '#{nombre_sala}'")
           pid_sala = Sala.iniciar(nombre_sala)
