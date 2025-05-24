@@ -29,6 +29,12 @@ IP's:
 192.168.100.91 servidor
 192.168.100.91 cliente1
 192.168.100.90 cliente2
+____________________________________________________________________________________________________________________________________________________________________
+
+
+Para probar el rendimiento del nodo_cliente.exs es necesario seguir los siguientes pasos:
+1. Iniciar un servidor
+2. Iniciar un cliente, sin embargo no se correrá el codigo del nodo_cliente.exs sino el benchmark.ex que contiene las pruebas de rendimiento (tiempos)
 
 Rendimiento de cliente (benchmark.ex)
 elixir --name cliente@192.168.100.91 --cookie my_cookie benchmark.ex
