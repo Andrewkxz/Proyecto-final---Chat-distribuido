@@ -9,12 +9,12 @@ defmodule NodoServidor do
   end
 
   defp loop(salas, historial, usuarios, conectados) do
-    conectados_vivos =conectados
+    conectados_vivos = conectados
     receive do
       {:autenticacion, pid, usuario = %Usuario{nombre: nombre}} ->
-        if Map.has_key?(conectados, pid) do
-          send(pid, {:error, "Ya estás autenticado."})
-          log_evento("El usuario #{nombre} ya está autenticado.")
+        if Enum.any?(conectados_vivos, fn {_p, n} -> n == nombre end) do
+          send(pid, {:autenticado, false})
+          log_evento("Intento duplicado de autenticacion para #{nombre}.")
           loop(salas, historial, usuarios, conectados_vivos)
         else
           Process.monitor(pid) # Monitorea el proceso del cliente

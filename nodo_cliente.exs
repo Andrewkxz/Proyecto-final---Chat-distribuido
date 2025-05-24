@@ -9,23 +9,24 @@ defmodule NodoCliente do
     usuario = Usuario.autenticar()
     send({:servidor, servidor_node}, {:autenticacion, self(), usuario})
 
-    IO.puts("Nodo cliente: #{inspect(Node.self())}")
-    IO.puts("Intentando conectar a: #{inspect(servidor_node)}")
-
     esperar_autenticacion(usuario, servidor_node)
   end
 
   defp esperar_autenticacion(usuario, servidor_node) do
     receive do
       {:autenticado, true} ->
-        Util.mostrar_mensaje("Bienvenido #{usuario.nombre} :D")
+        :timer.sleep(500)
+        IO.puts("\nAutenticación exitosa")
+        Util.mostrar_mensaje("Bienvenido, #{usuario.nombre} :D")
+        IO.puts("\nNodo cliente: #{inspect(Node.self())}")
+        IO.puts("Intentando conectar a: #{inspect(servidor_node)}")
 
         spawn(fn -> escuchar_mensajes(usuario, servidor_node) end)
-
         loop_comandos(usuario, nil, servidor_node)
 
       {:autenticado, false} ->
-        Util.mostrar_error("Credenciales incorrectas. Intenta de nuevo.")
+        Util.mostrar_error("El usuario ya está en linea desde otra maquina o terminal.")
+        :timer.sleep(1000)
         main()
     end
   end

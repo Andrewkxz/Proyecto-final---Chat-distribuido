@@ -19,7 +19,6 @@ defmodule Usuario do
     case buscar_usuario(nombre) do
       {:ok, contrasena_guardada} ->
         if contrasena_guardada == contrasena do
-          Util.mostrar_mensaje("Autenticación exitosa")
           :timer.sleep(500)
           crear(nombre, contrasena)
         else
