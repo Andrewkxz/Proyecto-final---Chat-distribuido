@@ -15,13 +15,12 @@ Este sistema aprovecha la concurrencia que ofrece Elixir para garantizar escalab
 ```plaintext
 nodo_cliente.exs     # Código fuente del cliente
 nodo_servidor.exs    # Código fuente del servidor
-cookies.exs          # Código fuente de las cookies
+cookie.exs           # Código fuente de las cookies
 sala.ex              # Código fuente de la sala
 supervisor.exs       # Código fuente del supervisor
 usuario.ex           # Código fuente del usuario
 util.ex              # Código fuente de utilidades
 docs/                # Documentación técnica y manuales
-tests/               # Scripts y resultados de pruebas de carga
 README.md            # Este documento
 ```
 
@@ -30,20 +29,32 @@ README.md            # Este documento
 - Elixir >= 1.14  
 - Erlang/OTP >= 25  
 
-## Comandos que dispone en el cliente
+## Comandos que dispone el usuario fuera de una sala
 
-| Comando   | Descripción                         |
-|-----------|-------------------------------------|
-| `/list`   | Muestra usuarios conectados         |
-| `/join`   | Unirse a una sala de chat           |
-| `/create` | Crear una nueva sala                |
-| `/history`| Consultar historial de mensajes     |
-| `/exit`   | Salir del chat                      |
+| Comando                       | Descripción                          |
+|-------------------------------|--------------------------------------|
+| `/create <nombre de la sala>` | Crea una nueva sala de chat.         |
+| `/join <nombre de la sala>`   | Unirse a una sala de chat existente. |
+| `/list`                       | Ver lista de usuarios conectados.    |
+| `/help`                       | Muestra este menú.                   |
+| `/close`                      | Cierra sesión.                       |
+
+
+## Comandos que dispone el usuario dentro de una sala
+
+| Comando          | Descripción                                        |
+|------------------|----------------------------------------------------|
+| `/msg <mensaje>` | Envía un mensaje a la sala.                        |
+| `/history`       | Consultar historial de mensajes de la sala actual. |
+| `/search`        | Busca mensajes por palabra clave en el historial.  |
+| `/exit`          | Salir de la sala actual.                           |
+| `/help`          | Muestra este menú.                                 |
+| `/close`         | Cierra sesión.                                     |
 
 ## Seguridad
 
 - Autenticación básica de usuarios.  
-- Cifrado opcional de mensajes en tránsito.  
+- Cifrado de mensajes en tránsito.  
 
 ## Documentación
 
