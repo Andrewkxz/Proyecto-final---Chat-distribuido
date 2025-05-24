@@ -8,7 +8,7 @@ Este sistema aprovecha la concurrencia que ofrece Elixir para garantizar escalab
 
 - Juliana Andrea Bustamante Niño  
 - Jaider Andrés Melo Rodríguez  
-- Alejandro Araujo  
+- Jhenier Alejandro Araujo Madroñero  
 
 ## Estructura del Proyecto
 
