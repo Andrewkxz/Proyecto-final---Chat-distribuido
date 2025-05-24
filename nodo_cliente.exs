@@ -1,6 +1,6 @@
 defmodule NodoCliente do
   def main do
-    servidor_node = :"servidor@#{:net_adm.localhost()}"
+    servidor_node = :"servidor@192.168.100.91"
     Node.connect(servidor_node)
     IO.inspect(Node.list(), label: "Nodos conectados")
     Util.mostrar_mensaje("Conectado al servidor")
