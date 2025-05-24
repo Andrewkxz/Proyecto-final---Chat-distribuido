@@ -1,14 +1,31 @@
-servidor: 
-elixir --sname servidor --cookie my_cookie nodo_servidor.exs
+Introducción:
 
-cliente1:
-elixir --sname cliente1 --cookie my_cookie nodo_cliente.exs
+Para correr los nodos es necesario saber la ip del computador, por favor cambia el el numero despues del arroba. Ejemplo: "cliente@192.168.100.91"
+(ya sea el servidor o el cliente) por tu dirección ip actual, las maquinas que se van a conectar de manera remota deben estar conectadas a la 
+misma red y cambiar dicho numero por la ip de la maquina actual (para correr nodos de cliente)
 
-cliente2:
-elixir --sname cliente2 --cookie my_cookie nodo_cliente.exs
+Anexo:
 
-cliente3:
-elixir --sname cliente3 --cookie my_cookie nodo_cliente.exs
+Si no conoces la ip de tu equipo, abre una terminal cmd y ejecuta el siguiente comando: ipconfig y ubique la que dice Dirección iPv4
+____________________________________________________________________________________________________________________________________________________________________
 
-cliente4:
-elixir --sname cliente4 --cookie my_cookie nodo_cliente.exs
+Ejemplos:
+servidor remoto:
+
+elixir --name servidor@192.168.100.91 --cookie my_cookie nodo_servidor.exs
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+cliente remoto:
+
+elixir --name cliente@192.168.100.91 --cookie my_cookie nodo_cliente.exs
+elixir --name cliente1@192.168.100.91 --cookie my_cookie nodo_cliente.exs
+elixir --name cliente2@192.168.100.91 --cookie my_cookie nodo_cliente.exs
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+IP's:
+
+192.168.100.91 servidor
+192.168.100.91 cliente1
+192.168.100.90 cliente2

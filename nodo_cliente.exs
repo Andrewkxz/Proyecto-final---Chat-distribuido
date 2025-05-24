@@ -246,21 +246,21 @@ defmodule NodoCliente do
 
   defp mostrar_menu(nil) do
     IO.puts("\nComandos disponibles:")
-    IO.puts("/create <nombre de la sala> - Crear una nueva sala")
-    IO.puts("/join <nombre de la sala> - Unirse a una sala existente")
-    IO.puts("/list - Ver usuarios conectados")
-    IO.puts("/help - Mostrar este menú")
-    IO.puts("/close - Salir del sistema")
+    IO.puts(IO.ANSI.format([:bright, :underline, "/create <nombre de la sala>", :reset, " - Crear una nueva sala"]))
+    IO.puts(IO.ANSI.format([:bright, :underline, "/join <nombre de la sala>", :reset, " - Unirse a una sala exitente"]))
+    IO.puts(IO.ANSI.format([:bright, :underline, "/list", :reset, " - Ver usuarios conectados"]))
+    IO.puts(IO.ANSI.format([:bright, :underline, "/help", :reset, " - Mostrar este menú"]))
+    IO.puts(IO.ANSI.format([:bright, :underline, "/close", :reset, " - Cerrar sesión"]))
   end
 
   defp mostrar_menu(_sala) do
     IO.puts("\nComandos disponibles:")
-    IO.puts("/msg <mensaje> - Enviar un mensaje a la sala")
-    IO.puts("/history - Ver el historial de mensajes")
-    IO.puts("/search <palabra> - Buscar mensajes en la sala")
-    IO.puts("/exit - Salir de la sala actual")
-    IO.puts("/help - Mostrar este menú")
-    IO.puts("/close - Cerrar sesión por completo")
+    IO.puts(IO.ANSI.format([:bright, :underline, "/msg <mensaje>", :reset, " - Enviar un mensaje a la sala"]))
+    IO.puts(IO.ANSI.format([:bright, :underline, "/history", :reset, " - Ver el historial de mensajes"]))
+    IO.puts(IO.ANSI.format([:bright, :underline, "/search <palabra>", :reset, " - Buscar mensajes en la sala"]))
+    IO.puts(IO.ANSI.format([:bright, :underline, "/exit", :reset, " - Salir de la sala actual"]))
+    IO.puts(IO.ANSI.format([:bright, :underline, "/help", :reset, " - Mostrar este menú"]))
+    IO.puts(IO.ANSI.format([:bright, :underline, "/close", :reset, " - Cerrar sesión"]))
   end
 end
 
